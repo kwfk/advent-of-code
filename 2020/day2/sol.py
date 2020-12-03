@@ -1,4 +1,4 @@
-fs = open('day2/input.txt', 'r')
+fs = open('2020/day2/input.txt', 'r')
 
 count = 0
 

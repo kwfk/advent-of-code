@@ -1,4 +1,4 @@
-fs = open('day1/input.txt', 'r')
+fs = open('2020/day1/input.txt', 'r')
 nums = fs.readlines()
 for i in range(len(nums) - 1):
     for j in range(i, len(nums)):

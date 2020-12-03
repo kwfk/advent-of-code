@@ -1,4 +1,4 @@
-fs = open('day3/input.txt', 'r')
+fs = open('2020/day3/input.txt', 'r')
 
 first = fs.readline()
 
