@@ -31,17 +31,36 @@ while line:
     preamble = preamble[1:] + [num]
     line = fs.readline().strip()
 
-found = False
-for i in range(len(nums)):
-    for j in range(i + 1, len(nums)):
-        target = nums[i:j]
-        if sum(target) == special:
-            mini = min(target)
-            maxi = max(target)
-            print(mini + maxi)
-            found = True
-            break
-    if found:
-        break
+def part2():
+    start = 0
+    end = 1
+    tmp = 0
+    for i in range(len(nums)):
+        curr = nums[i]
+        j = i + 1
+        while True:
+            if curr == special:
+                return min(nums[i:j]) + max(nums[i:j])
+            if curr > special or j == len(nums):
+                break
+            curr += nums[j]
+            j += 1
+
+print(part2())
+
+
+
+# found = False
+# for i in range(len(nums)):
+#     for j in range(i + 1, len(nums)):
+#         target = nums[i:j]
+#         if sum(target) == special:
+#             mini = min(target)
+#             maxi = max(target)
+#             print(mini + maxi)
+#             found = True
+#             break
+#     if found:
+#         break
 
 fs.close()
